@@ -28,3 +28,39 @@
     padding: 5rem;
     text-align: justify;
 }
+
+.text-overlay {
+    background: -webkit-gradient(linear, left top, right top, from(cyan), to(orange));
+    background: -o-linear-gradient(left, cyan, orange);
+    background: linear-gradient(to right, cyan, orange);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: huerotate 30s linear infinite;
+    animation: huerotate 30s linear infinite;
+    z-index: 1
+}
+
+@keyframes huerotate {
+    0% {
+        -webkit-filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg)
+    }
+
+    100% {
+        -webkit-filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg)
+    }
+}
+
+@-webkit-keyframes huerotate {
+    0% {
+        -webkit-filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg)
+    }
+
+    100% {
+        -webkit-filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg)
+    }
+}
